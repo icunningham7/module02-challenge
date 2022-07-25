@@ -1,9 +1,9 @@
 /* CSS Properties */
 
 :root {
-    --cprimary: #8cf6f4;
+    --cprimary: #8ae8e6;
     --csecondary: #2b5578;
-    --ctertiary: #23292e;
+    --ctertiary: #323b43;
     --clight: #dfe4e8;
     --ffamily: 'tahoma', 'verdana', sans-serif;
 }
@@ -11,23 +11,11 @@
 
 /* Decoration */
 
-html, body {
+body {
     background-color: var(--clight);
     font-family: var(--ffamily);
+    line-height: 1.5;
     color: var(--ctertiary);
-    margin: 0;
-}
-
-header {
-    background-color: var(--ctertiary);
-}
-
-header a {
-    padding: 3px 5px;
-    color: var(--cprimary);
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid;
 }
 
 h1 {
@@ -60,8 +48,35 @@ p {
     font-size: 14px;
 }
 
-/* Structure  */
+header {
+    background-color: var(--ctertiary);
+}
 
+header a {
+    padding: 3px 5px;
+    color: var(--cprimary);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+.banner .subtitle {
+    background-color: var(--cprimary);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.section-header {
+    text-align: right;
+}
+
+.section-body {
+    border-left: var(--csecondary) solid 2px;
+}
+
+/*** Structure  ***/
+
+/* Header */
 header {
     position: sticky;
     display: flex;
@@ -70,8 +85,8 @@ header {
 
 h1 {
     display: inline-block;
-    padding: 1rem 1rem 1rem 4rem;
-    margin: 1rem 1rem 1rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 4rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
 nav {
@@ -87,4 +102,43 @@ nav {
 
 .nav-list li {
     padding: 0 5px;
+}
+
+/* Body */
+.banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.banner img {
+    height: 100%;
+}
+
+.banner .subtitle {
+    position: absolute;
+    padding: 0.5rem;
+    right: 3rem;
+    bottom: 1rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.section-header {
+    width: 13%;
+    margin-right: 2%;
+}
+
+.section-body {
+    width: 62%;
+    padding-left: 3%;
 }
