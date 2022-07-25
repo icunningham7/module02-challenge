@@ -1,0 +1,90 @@
+/* CSS Properties */
+
+:root {
+    --cprimary: #8cf6f4;
+    --csecondary: #2b5578;
+    --ctertiary: #23292e;
+    --clight: #dfe4e8;
+    --ffamily: 'tahoma', 'verdana', sans-serif;
+}
+
+
+/* Decoration */
+
+html, body {
+    background-color: var(--clight);
+    font-family: var(--ffamily);
+    color: var(--ctertiary);
+    margin: 0;
+}
+
+header {
+    background-color: var(--ctertiary);
+}
+
+header a {
+    padding: 3px 5px;
+    color: var(--cprimary);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+h1 {
+    color: var(--ctertiary);
+    background-color: var(--cprimary);
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Structure  */
+
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    display: inline-block;
+    padding: 1rem 1rem 1rem 4rem;
+    margin: 1rem 1rem 1rem 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list li {
+    padding: 0 5px;
+}
