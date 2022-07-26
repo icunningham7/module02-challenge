@@ -55,8 +55,9 @@ a {
     border-bottom: 2px solid;
 }
 
-header {
+header, footer {
     background-color: var(--ctertiary);
+    min-height: 50px;
 }
 
 header a {
@@ -210,6 +211,10 @@ section.banner {
 
 /* Footer */
 
+footer {
+    position: static;
+    bottom: 0;
+}
 
 /*** Media Queries ***/
 
