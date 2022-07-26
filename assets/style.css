@@ -1,9 +1,9 @@
 /* CSS Properties */
 
 :root {
-    --cprimary: #8ae8e6;
+    --cprimary: #ECE6D2;
     --csecondary: #2b5578;
-    --ctertiary: #323b43;
+    --ctertiary: #203236;
     --clight: #dfe4e8;
     --ffamily: 'tahoma', 'verdana', sans-serif;
 }
@@ -73,14 +73,6 @@ main a {
     font-weight: 600;
 }
 
-.section-header {
-    text-align: right;
-}
-
-.section-body {
-    border-left: var(--csecondary) solid 2px;
-}
-
 .project-list .overlay {
     display: flex;
     border: var(--cprimary) 4px solid;
@@ -89,7 +81,7 @@ main a {
 
 .project-list img {
     opacity: 0.8;
-    transition: all 0.5s;
+    transition: all 300ms;
 }
 
 .project-list img:hover {
@@ -99,7 +91,7 @@ main a {
 
 .project-details {
     background-color:  var(--cprimary);
-    padding: 0.75rem;
+    padding: 2%;
 }
 
 
@@ -122,16 +114,17 @@ h1 {
 nav {
     display: flex;
     align-items: center;
-    padding-right: 3rem;
+    padding-right: 6%;
 }
 
 .nav-list {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
 .nav-list li {
-    padding: 0 5px;
+    padding: 0 0.25rem;
 }
 
 /* Body */
@@ -141,15 +134,16 @@ nav {
     position: relative;
 }
 .banner img, .project-list img {
-    height: 100%;
+    max-height: 250px;
     width: 100%;
+    object-fit: cover;
 }
 
 .banner .subtitle {
     position: absolute;
-    padding: 0.5rem;
-    right: 3rem;
-    bottom: 1rem;
+    padding: 1%;
+    right: 5%;
+    bottom: 4%;
 }
 
 main {
@@ -161,7 +155,7 @@ section {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 2% 0;
 }
 
 section.banner {
@@ -171,11 +165,13 @@ section.banner {
 .section-header {
     width: 13%;
     margin-right: 2%;
+    text-align: right;
 }
 
 .section-body {
     width: 62%;
     padding-left: 3%;
+    border-left: var(--csecondary) solid 2px;
 }
 
 .project-list {
@@ -198,7 +194,7 @@ section.banner {
 
 .project .project-details {
     position: absolute;
-    bottom: 1rem;
+    bottom: 6%;
 }
 
 .horizontal-list {
@@ -219,11 +215,62 @@ footer {
 /*** Media Queries ***/
 
 @media screen and (max-width: 900px) {
-.project {
-    width: 98%
-}
-.project.feature {
-    width: 98%;
-}
+    .project {
+        width: 98%
+    }
+
+    .project.feature {
+        width: 98%;
+    }
     
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-right: 1%;
+    }
+
+    section {
+        flex-flow: column wrap;
+        margin: 0;
+    }
+
+    .section-header {
+        width: auto;
+        margin: 2% 0;
+        text-align: center;
+    }
+
+    .section-body {
+        width: auto;
+        margin: 2%;
+        padding: 0;
+        border-top: var(--csecondary) solid 2px;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    a {
+        padding: 3px 0;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    .nav-list {
+        justify-content: space-evenly;
+    }
+
+    .section-body {
+        margin: 0;
+    }
+
+        .horizontal-list {
+        flex-flow: column wrap;
+    }
 }
