@@ -9,7 +9,7 @@
 }
 
 
-/* Decoration */
+/*** Decoration ***/
 
 body {
     background-color: var(--clight);
@@ -48,16 +48,22 @@ p {
     font-size: 14px;
 }
 
+a {
+    padding: 3px 5px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
 header {
     background-color: var(--ctertiary);
 }
 
 header a {
-    padding: 3px 5px;
     color: var(--cprimary);
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid;
+}
+main a {
+    color: var(--ctertiary);
 }
 
 .banner .subtitle {
@@ -74,8 +80,6 @@ header a {
     border-left: var(--csecondary) solid 2px;
 }
 
-
-
 .project-list .overlay {
     display: flex;
     border: var(--cprimary) 4px solid;
@@ -83,7 +87,6 @@ header a {
 }
 
 .project-list img {
-    position: relative;
     opacity: 0.8;
     transition: all 0.5s;
 }
@@ -92,6 +95,12 @@ header a {
     opacity: 1;
 
 }
+
+.project-details {
+    background-color:  var(--cprimary);
+    padding: 0.75rem;
+}
+
 
 /*** Structure  ***/
 
@@ -166,4 +175,50 @@ section.banner {
 .section-body {
     width: 62%;
     padding-left: 3%;
+}
+
+.project-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.project {
+    display: inline-block;
+    position: relative;
+    width: 48%;
+    min-width: 260px;
+    margin: 1%
+}
+
+.project.feature {
+    width: 100%;
+}
+
+.project .project-details {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.horizontal-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+
+/* Footer */
+
+
+/*** Media Queries ***/
+
+@media screen and (max-width: 900px) {
+.project {
+    width: 98%
+}
+.project.feature {
+    width: 98%;
+}
+    
 }
