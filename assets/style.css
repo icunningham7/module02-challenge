@@ -74,12 +74,32 @@ header a {
     border-left: var(--csecondary) solid 2px;
 }
 
+
+
+.project-list .overlay {
+    display: flex;
+    border: var(--cprimary) 4px solid;
+    background: var(--csecondary);
+}
+
+.project-list img {
+    position: relative;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.project-list img:hover {
+    opacity: 1;
+
+}
+
 /*** Structure  ***/
 
 /* Header */
 header {
     position: sticky;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
@@ -110,8 +130,9 @@ nav {
     justify-content: center;
     position: relative;
 }
-.banner img {
+.banner img, .project-list img {
     height: 100%;
+    width: 100%;
 }
 
 .banner .subtitle {
@@ -131,6 +152,10 @@ section {
     flex-flow: row nowrap;
     justify-content: center;
     margin: 1rem 0;
+}
+
+section.banner {
+    margin: 0;
 }
 
 .section-header {
