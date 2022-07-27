@@ -11,6 +11,10 @@
 
 /*** Decoration ***/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--clight);
     font-family: var(--ffamily);
@@ -48,7 +52,11 @@ p {
     font-size: 14px;
 }
 
-a {
+a, a:link, a:visited {
+    color: var(--ctertiary);
+}
+
+.list a {
     padding: 3px 5px;
     font-weight: 700;
     text-decoration: none;
@@ -60,10 +68,10 @@ header, footer {
     min-height: 50px;
 }
 
-header a {
+header .list a {
     color: var(--cprimary);
 }
-main a {
+main .list a {
     color: var(--ctertiary);
 }
 
@@ -117,13 +125,13 @@ nav {
     padding-right: 6%;
 }
 
-.nav-list {
+.nav.list {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.nav-list li {
+.nav.list li {
     padding: 0 0.25rem;
 }
 
@@ -174,6 +182,13 @@ section.banner {
     border-left: var(--csecondary) solid 2px;
 }
 
+.portrait {
+    border: var(--cprimary) 4px solid;
+    margin: 0 2% 2% 3%;
+    width: 250px;
+    float: right;
+}
+
 .project-list {
     display: flex;
     flex-flow: row wrap;
@@ -197,7 +212,7 @@ section.banner {
     bottom: 6%;
 }
 
-.horizontal-list {
+.horizontal.list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -210,9 +225,16 @@ section.banner {
 footer {
     position: static;
     bottom: 0;
+    margin-top: 1px;
 }
 
 /*** Media Queries ***/
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 
 @media screen and (max-width: 900px) {
     .project {
@@ -226,6 +248,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .nav.list a {
+        border-bottom: none;
+    }
+
     nav {
         width: 100%;
         display: flex;
@@ -247,30 +273,39 @@ footer {
     .section-body {
         width: auto;
         margin: 2%;
-        padding: 0;
+        padding: 2% 0 0 0;
         border-top: var(--csecondary) solid 2px;
         border-left: none;
+    }
+
+    .portrait {
+        margin-top: 1%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    a {
+    .list a {
         padding: 3px 0;
+        font-size: 12px;
     }
 
     nav {
         padding: 0;
     }
 
-    .nav-list {
+    .nav.list {
         justify-content: space-evenly;
+    }
+
+    .nav.list li {
+        padding: 0;
     }
 
     .section-body {
         margin: 0;
     }
 
-        .horizontal-list {
+    .horizontal.list {
         flex-flow: column wrap;
     }
 }
