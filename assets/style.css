@@ -83,6 +83,7 @@ main .list a {
 
 .project-list .overlay {
     display: flex;
+    min-height: 98%;
     border: var(--cprimary) 4px solid;
     background: var(--csecondary);
 }
@@ -147,6 +148,11 @@ nav {
     object-fit: cover;
 }
 
+.project-list img.feature {
+    object-fit: cover;
+    max-height: 500px;
+}
+
 .banner .subtitle {
     position: absolute;
     padding: 1%;
@@ -205,6 +211,7 @@ section.banner {
 
 .project.feature {
     width: 100%;
+    min-height:  400px;
 }
 
 .project .project-details {

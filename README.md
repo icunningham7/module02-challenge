@@ -7,7 +7,7 @@ This is a personal portfolio for a web devleoper. It provides potential employer
 Live URL: [https://icunningham7.github.io/module02-challenge](https://icunningham7.github.io/module02-challenge)
 
 Mockup Preview Image:
-![Portfolio Mockup Webpage](./assets/images/module02-challenge-mockup.png)
+![Portfolio Mockup Webpage](./assets/images/Portfolio.png)
 
 ## Project Requirements
 
